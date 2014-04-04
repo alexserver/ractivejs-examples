@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RactiveForm Example</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="/js/Ractive.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="/js/Ractive-events-tap.min.js" type="text/javascript" charset="utf-8" ></script>
+  
+</head>
+<body>
+
+  <div class="container">
+    <h1>Modal</h1>
+    <a href="#" title="show modal" class="showmodal" >show</a>
+  </div>
+
+  <script type="text/ractive" id="rs-modal-template">
+    <!-- Ractive template -->
+
+    <div class='modal-background' proxy-tap='close' intro='fadeIn' outro='fadeOut'>
+      <div class='modal-outer'>
+        <div class='modal'>
+          <div class='modal-body'>{{>modalContent}}</div>
+          <div class='modal-footer'><a class="modal-button" on-click="okay">Okay</a></div>
+        </div>
+      </div>
+    </div>
+
+  </script>
+
+  <script src="index.js" type="text/javascript" charset="utf-8" ></script>
+</body>
+</html>
